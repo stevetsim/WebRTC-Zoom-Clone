@@ -3,7 +3,7 @@ const logger = require('./utils/logger').getLogger('Server')
 const dotenv = require('dotenv')
 dotenv.config()
 
-// Import WebServer & Socket Server Module
+// Import WebServer, Socket Server and Peer Server Module
 const { http, app } = require('./servers/express')
 const socket = require('./servers/socket')
 const peer = require('./servers/peer')

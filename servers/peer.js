@@ -10,13 +10,13 @@ module.exports = {
   init: (http, app) => {
     const peer_server = ExpressPeerServer(http, { path: '/rtc' })
     peer_server.on('connection', (client) => {
-      console.log(client)
+      logger.trace(`${client.id} has been connected to Peer Server`)
     })
 
     peer_server.on('disconnect', (client) => {
-      console.log(client)
+      logger.trace(`${client.id} has been disconnected from Peer Server`)
     })
 
-    app.use('/peer', peer_server)
+    app.use('/peerjs', peer_server)
   }
 }
