@@ -5,3 +5,8 @@ A Video Chat Server built with Express, Socket.io and WebRTC(Peer.js)
 ```
 npm i && node index.js
 ```
+
+## Endpoint
+```
+localhost:3000/connect
+```
